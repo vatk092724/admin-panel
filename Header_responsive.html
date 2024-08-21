@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive nav bar</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="Header_responsive.css">
+    <script src="./index.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <img src="https://t3.ftcdn.net/jpg/02/51/80/40/360_F_251804029_ON3oL8BkopdueiT61zXaDMOF3qfSiWNx.jpg" alt="" class="logo">
+        <nav>
+            <ul class="navlinks">
+                <li class="items"><a href="#">Home</a></li>
+                <li class="items"><a href="#">Services</a></li>
+                <li class="items"><a href="#">Blog</a></li>
+                <li class="items"><a href="#">About-Us</a></li>
+                <li><a href="#"><button>Contact Us</button></a></li>
+                <li onclick="showSidebar()"><a href="#"><ion-icon name="menu-outline"></ion-icon></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick="closeSidebar()"><a href="#"><ion-icon name="close-outline"></ion-icon></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About-Us</a></li>
+                <img src="https://t3.ftcdn.net/jpg/02/51/80/40/360_F_251804029_ON3oL8BkopdueiT61zXaDMOF3qfSiWNx.jpg" alt="" >
+            </ul>
+        </nav>
+    </header>
+</body>
+        
+        
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>
+<script>
+    function showSidebar() {
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.style.display = 'flex';
+    setTimeout(() => {
+        sidebar.style.transform = 'translateX(0)'; 
+    }, 10);
+}
+
+function closeSidebar() {
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.style.transform = 'translateX(100%)'; 
+    setTimeout(() => {
+        sidebar.style.display = 'none';
+    }, 300);
+}
+</script>

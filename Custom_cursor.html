@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Custom_cursor.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hcp0zud.css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class='cursor animated infinite heartBeat delay-5s	slow'></div>
+<div class='cursor animated infinite heartBeat delay-5s slow'></div>
+
+
+<h1><a href="https://codepen.io/jamesneufeld/live/vbymBJ" target=_blank"><div class="section">My beating heart</a></h1>
+  <h1 class="line-1 anim-typewriter">made with animate.css, jquery and css steps()</h1>
+</div>
+</body>
+</html>
+<script>
+    $(document).mousemove(function(e) {
+  $(".cursor")
+    .eq(0)
+    .css({
+      left: e.pageX,
+      top: e.pageY
+    });
+  setTimeout(function() {
+    $(".cursor")
+      .eq(1)
+      .css({
+        left: e.pageX,
+        top: e.pageY
+      });
+  }, 100);
+});
+
+</script>
